@@ -20,8 +20,8 @@
         <!--
         <module>controlpanel</module>
         <module>editor</module>
-        <module>runtime</module>
         -->
+        <module>runtime</module>
         <module>yawl-lib</module>
         <module>engine</module>
         <module>resourceService</module>
