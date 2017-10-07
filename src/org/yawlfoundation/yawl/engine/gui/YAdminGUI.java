@@ -19,6 +19,16 @@
 package org.yawlfoundation.yawl.engine.gui;
 
 
+import java.awt.*;
+import java.awt.event.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
+import java.util.List;
+import java.util.prefs.Preferences;
+import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.yawlfoundation.yawl.authentication.YExternalClient;
@@ -44,17 +54,6 @@ import org.yawlfoundation.yawl.unmarshal.YMarshal;
 import org.yawlfoundation.yawl.util.StringUtil;
 import org.yawlfoundation.yawl.util.YVerificationHandler;
 import org.yawlfoundation.yawl.util.YVerificationMessage;
-
-import javax.swing.*;
-import javax.swing.filechooser.FileFilter;
-import java.awt.*;
-import java.awt.event.*;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.*;
-import java.util.List;
-import java.util.prefs.Preferences;
 
 /**
  * 
@@ -564,7 +563,7 @@ public class YAdminGUI extends JPanel implements InterfaceBClientObserver,
                     "Error Loading Workflow",
                     JOptionPane.ERROR_MESSAGE);
         }
-        if (verificationHandler.hasErrors()) {
+        if (!verificationHandler.hasErrors()) {
             for (YSpecificationID specID : newSpecIDs)
             {
                 spec = _engineManagement.getSpecification(specID);
