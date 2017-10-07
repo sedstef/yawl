@@ -18,6 +18,10 @@
 
 package org.yawlfoundation.yawl.engine;
 
+import java.io.InputStream;
+import java.net.URI;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jdom2.Document;
@@ -48,11 +52,6 @@ import org.yawlfoundation.yawl.schema.XSDType;
 import org.yawlfoundation.yawl.schema.YDataValidator;
 import org.yawlfoundation.yawl.unmarshal.YMarshal;
 import org.yawlfoundation.yawl.util.*;
-
-import java.io.InputStream;
-import java.net.URI;
-import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author Lachlan Aldred
@@ -159,6 +158,8 @@ public class YEngine implements InterfaceADesign,
             return getInstance(ENGINE_PERSISTS_BY_DEFAULT);
         }
         catch (Exception e) {
+            //field _logger not initialized yet
+            LogManager.getLogger(YEngine.class).catching(e);
             throw new RuntimeException("Failure to instantiate the engine.");
         }
     }
