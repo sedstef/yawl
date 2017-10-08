@@ -18,14 +18,13 @@
 
 package org.yawlfoundation.yawl.engine.interfce.interfaceB;
 
+import java.net.URI;
+import java.util.Set;
 import org.yawlfoundation.yawl.authentication.YClient;
 import org.yawlfoundation.yawl.elements.YTask;
 import org.yawlfoundation.yawl.engine.*;
 import org.yawlfoundation.yawl.exceptions.*;
 import org.yawlfoundation.yawl.logging.YLogDataItemList;
-
-import java.net.URI;
-import java.util.Set;
 
 /**
  * Defines the 'B' interface into the YAWL Engine corresponding to WfMC interfaces 2+3 - Workflow client applications and invoked applications.
@@ -127,7 +126,7 @@ public interface InterfaceBClient {
 
     YWorkItem createNewInstance(YWorkItem workItem, String paramValueForMICreation) throws YStateException, YPersistenceException;
 
-    Set getChildrenOfWorkItem(YWorkItem workItem);
+    Set<YWorkItem> getChildrenOfWorkItem(YWorkItem workItem);
 
     /**
      * Returns the task definition, not the task instance.

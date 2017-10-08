@@ -1818,7 +1818,7 @@ public class YEngine implements InterfaceADesign,
     }
 
 
-    public Set getChildrenOfWorkItem(YWorkItem workItem) {
+    public Set<YWorkItem> getChildrenOfWorkItem(YWorkItem workItem) {
         return (workItem == null) ? null :
                 _workItemRepository.getChildrenOf(workItem.getIDString());
     }
