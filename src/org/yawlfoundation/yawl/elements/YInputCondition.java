@@ -29,6 +29,9 @@ import org.yawlfoundation.yawl.util.YVerificationHandler;
  */
 public final class YInputCondition extends YCondition {
 
+    public YInputCondition() {
+    }
+
     /**
      * Constructor.
      * @param id of the NetElement.

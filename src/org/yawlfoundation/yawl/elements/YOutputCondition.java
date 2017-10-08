@@ -30,6 +30,8 @@ import org.yawlfoundation.yawl.util.YVerificationHandler;
  */
 public final class YOutputCondition extends YCondition {
 
+    public YOutputCondition() {
+    }
 
     public YOutputCondition(String id, String label, YNet container) {
         super(id, label, container);

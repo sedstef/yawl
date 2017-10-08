@@ -18,13 +18,12 @@
 
 package org.yawlfoundation.yawl.elements;
 
+import java.util.List;
 import org.yawlfoundation.yawl.elements.state.YIdentifier;
 import org.yawlfoundation.yawl.engine.YPersistenceManager;
 import org.yawlfoundation.yawl.exceptions.YPersistenceException;
 import org.yawlfoundation.yawl.util.YIdentifierBag;
 import org.yawlfoundation.yawl.util.YVerificationHandler;
-
-import java.util.List;
 
 /**
  * 
@@ -37,6 +36,9 @@ public class YCondition extends YExternalNetElement implements YConditionInterfa
 
     protected YIdentifierBag _bag;
     private boolean _isImplicit;
+
+    public YCondition() {
+    }
 
     public YCondition(String id, String label, YNet container) {
         this(id, container);

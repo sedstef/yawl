@@ -28,6 +28,9 @@ package org.yawlfoundation.yawl.elements;
 public abstract class YNetElement implements Cloneable, Comparable {
     private String _id;
 
+    public YNetElement() {
+    }
+
     /**
      * Constructor
      * @param id

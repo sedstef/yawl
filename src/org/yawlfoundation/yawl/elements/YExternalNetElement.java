@@ -18,11 +18,10 @@
 
 package org.yawlfoundation.yawl.elements;
 
+import java.util.*;
 import org.yawlfoundation.yawl.util.StringUtil;
 import org.yawlfoundation.yawl.util.YNetElementDocoParser;
 import org.yawlfoundation.yawl.util.YVerificationHandler;
-
-import java.util.*;
 
 
 /**
@@ -48,6 +47,8 @@ public abstract class YExternalNetElement extends YNetElement implements YVerifi
     private Set<YExternalNetElement> _cancelledBySet = new HashSet<YExternalNetElement>();
     private Set<YExternalNetElement> _yawlMappingSet = new HashSet<YExternalNetElement>();
 
+    public YExternalNetElement() {
+    }
 
     public YExternalNetElement(String id, YNet container) {
         super(id);

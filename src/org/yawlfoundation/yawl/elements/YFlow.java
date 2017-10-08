@@ -38,6 +38,9 @@ public class YFlow implements Comparable<YFlow> {
     private boolean _isDefaultFlow;
     private String _documentation;
 
+    public YFlow() {
+    }
+
     public YFlow(YExternalNetElement priorElement, YExternalNetElement nextElement) {
         _priorElement = priorElement;
         _nextElement = nextElement;
