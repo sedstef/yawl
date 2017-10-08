@@ -2004,7 +2004,7 @@ public class YEngine implements InterfaceADesign,
     }
 
 
-    public Set getUsers() {
+    public Set<YExternalClient> getUsers() {
         _logger.debug("<-- getUsers: Returned {} entries", _externalClients.size());
         return getExternalClients();
     }
