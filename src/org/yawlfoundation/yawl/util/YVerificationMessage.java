@@ -29,6 +29,8 @@ public class YVerificationMessage {
     private Object _source;
     private String _message;
 
+    public YVerificationMessage() {
+    }
 
     public YVerificationMessage(Object source, String message) {
         _source = source;
@@ -43,5 +45,9 @@ public class YVerificationMessage {
 
 
     public void setSource(Object source) { _source = source; }
+
+    public void setMessage(String _message) {
+        this._message = _message;
+    }
 
 }

@@ -18,6 +18,7 @@
 
 package org.yawlfoundation.yawl.elements;
 
+import java.util.*;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.yawlfoundation.yawl.elements.data.YParameter;
@@ -29,8 +30,6 @@ import org.yawlfoundation.yawl.util.DynamicValue;
 import org.yawlfoundation.yawl.util.JDOMUtil;
 import org.yawlfoundation.yawl.util.StringUtil;
 import org.yawlfoundation.yawl.util.YVerificationHandler;
-
-import java.util.*;
 
 /**
  * 
@@ -63,6 +62,10 @@ public abstract class YDecomposition implements Cloneable, YVerifiable {
 
 
     // CONSTRUCTOR //
+
+    
+    public YDecomposition() {
+    }
 
     public YDecomposition(String id, YSpecification specification) {
         _id = id;

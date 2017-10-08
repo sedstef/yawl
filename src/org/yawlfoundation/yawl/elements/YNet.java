@@ -18,6 +18,7 @@
 
 package org.yawlfoundation.yawl.elements;
 
+import java.util.*;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.output.Format;
@@ -33,8 +34,6 @@ import org.yawlfoundation.yawl.engine.YPersistenceManager;
 import org.yawlfoundation.yawl.exceptions.YDataStateException;
 import org.yawlfoundation.yawl.exceptions.YPersistenceException;
 import org.yawlfoundation.yawl.util.*;
-
-import java.util.*;
 
 /**
  * 
@@ -52,6 +51,8 @@ public final class YNet extends YDecomposition {
     private String _externalDataGateway;
     private YNet _clone;
 
+    public YNet() {
+    }
 
     public YNet(String id, YSpecification specification) {
         super(id, specification);
