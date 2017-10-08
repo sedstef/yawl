@@ -18,10 +18,9 @@
 
 package org.yawlfoundation.yawl.engine;
 
-import org.yawlfoundation.yawl.elements.state.YIdentifier;
-
 import java.math.BigInteger;
 import java.util.Arrays;
+import org.yawlfoundation.yawl.elements.state.YIdentifier;
 
 /**
  * 
@@ -34,6 +33,8 @@ public class YWorkItemID {
     private YIdentifier _caseID;
     private String _taskID;
 
+    public YWorkItemID() {
+    }
 
     public YWorkItemID(YIdentifier caseID, String taskID) {
         this(caseID, taskID, null);
