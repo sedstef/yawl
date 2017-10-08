@@ -1,7 +1,5 @@
 package org.yawlfoundation.yawl.authentication;
 
-import org.junit.rules.Timeout;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Timer;
