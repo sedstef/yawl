@@ -23,7 +23,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.3</version>
                 <configuration>
-                    <warName>balancer</warName>
+                    <warName>costService</warName>
                     <webXml>${project.basedir}/../../build/costService/web.xml</webXml>
                 </configuration>
             </plugin>
@@ -59,15 +59,10 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>yawl-lib</artifactId>
-            <version>${project.version}</version>
-            <scope>provided</scope>
         </dependency>
-        
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
-            <version>7.0</version>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 

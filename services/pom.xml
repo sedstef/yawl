@@ -15,6 +15,7 @@
     <modules>
         <module>runtime</module>
         <module>engine</module>
+        <module>balancer</module>
         <module>costService</module>
         <module>digitalSignature</module>
         <module>documentStore</module>
@@ -31,5 +32,22 @@
         <module>yawlSMSInvoker</module>
         <module>yawlWSInvoker</module>
     </modules>
-    
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>yawl-lib</artifactId>
+                <version>${project.version}</version>
+                <scope>provided</scope>
+            </dependency>
+        
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-web-api</artifactId>
+                <version>7.0</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>    
 </project>
