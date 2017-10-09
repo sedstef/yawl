@@ -17,12 +17,10 @@
     </properties>
 
     <modules>
-        <!--
-        <module>controlpanel</module>
-        <module>editor</module>
-        -->
         <module>yawl/yawl-lib</module>
         <module>services</module>
+        <module>controlpanel</module>
+        <module>editor</module>
     </modules>
     
     <profiles>        
