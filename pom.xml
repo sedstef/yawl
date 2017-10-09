@@ -12,12 +12,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
-        
-        <hibernate.dialect>org.hibernate.dialect.PostgreSQLDialect</hibernate.dialect>
-        <hibernate.connection.driver_class>org.postgresql.Driver</hibernate.connection.driver_class>
-        <hibernate.connection.url>jdbc:postgresql:yawl</hibernate.connection.url>
-        <hibernate.connection.username>postgres</hibernate.connection.username>
-        <hibernate.connection.password>yawl</hibernate.connection.password>
     </properties>
 
     <modules>
@@ -28,34 +22,4 @@
         <module>yadmin</module>
     </modules>
     
-    <profiles>        
-        <profile>
-            <id>H2</id>            
-            <properties>
-                <hibernate.dialect>org.hibernate.dialect.H2Dialect</hibernate.dialect>
-                <hibernate.connection.driver_class>org.h2.Driver</hibernate.connection.driver_class>
-                <hibernate.connection.url>jdbc:h2:${catalina.base}/database/yawldb;MVCC=TRUE;AUTO_SERVER=TRUE</hibernate.connection.url>
-            </properties>
-        </profile>
-        <profile>
-            <id>Derby Embedded</id>            
-            <properties>
-                <hibernate.dialect>org.hibernate.dialect.DerbyDialect</hibernate.dialect>
-                <hibernate.connection.driver_class>org.apache.derby.jdbc.EmbeddedDriver</hibernate.connection.driver_class>
-                <hibernate.connection.url>jdbc:derby:yawl;create=true</hibernate.connection.url>
-                <hibernate.connection.username></hibernate.connection.username>
-                <hibernate.connection.password></hibernate.connection.password>
-            </properties>
-        </profile>
-        <profile>
-            <id>Derby Client</id>            
-            <properties>
-                <hibernate.dialect>org.hibernate.dialect.DerbyDialect</hibernate.dialect>
-                <hibernate.connection.driver_class>org.apache.derby.jdbc.ClientDriver</hibernate.connection.driver_class>
-                <hibernate.connection.url>jdbc:derby:///yawl</hibernate.connection.url>
-                <hibernate.connection.username></hibernate.connection.username>
-                <hibernate.connection.password></hibernate.connection.password>
-            </properties>
-        </profile>
-    </profiles>
 </project>
