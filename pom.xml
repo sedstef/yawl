@@ -9,6 +9,10 @@
     <name>YAWL</name>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven.compiler.target>1.6</maven.compiler.target>
+        
         <hibernate.dialect>org.hibernate.dialect.PostgreSQLDialect</hibernate.dialect>
         <hibernate.connection.driver_class>org.postgresql.Driver</hibernate.connection.driver_class>
         <hibernate.connection.url>jdbc:postgresql:yawl</hibernate.connection.url>
