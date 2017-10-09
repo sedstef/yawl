@@ -6,10 +6,10 @@
         <artifactId>services</artifactId>
         <version>4.1-SNAPSHOT</version>
     </parent>
-    <artifactId>costService</artifactId>
+    <artifactId>procletService</artifactId>
     <packaging>war</packaging>
 
-    <name>YAWL - CostService</name>
+    <name>YAWL - ProcletService</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
@@ -17,14 +17,23 @@
     </properties>
     
     <build>
+        <resources>
+            <resource>
+                <directory>../../build/procletService</directory>
+                <excludes>
+                    <exclude>web.xml</exclude>
+                </excludes>
+            </resource>
+        </resources>
+        
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.3</version>
                 <configuration>
-                    <warName>balancer</warName>
-                    <webXml>${project.basedir}/../../build/costService/web.xml</webXml>
+                    <warName>procletService</warName>
+                    <webXml>${project.basedir}/../../build/procletService/web.xml</webXml>
                 </configuration>
             </plugin>
             <plugin>

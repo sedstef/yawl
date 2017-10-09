@@ -14,9 +14,22 @@
 
     <modules>
         <module>runtime</module>
-        <module>yawlService</module>
+        <module>engine</module>
         <module>costService</module>
+        <module>digitalSignature</module>
+        <module>documentStore</module>
+        <module>mailSender</module>
+        <module>mailService</module>
+        <module>monitorService</module>
+        <module>procletService</module>
+        <module>reporter</module>
         <module>resourceService</module>
+        <module>schedulingService</module>
+        <module>testService</module>
+        <module>twitterService</module>
+        <module>workletService</module>
+        <module>yawlSMSInvoker</module>
+        <module>yawlWSInvoker</module>
     </modules>
     
 </project>
