@@ -11,7 +11,11 @@
     <packaging>pom</packaging>
 
     <name>YAWL Services</name>
-
+    
+    <properties>
+        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+    </properties>
+    
     <modules>
         <module>runtime</module>
         <module>engine</module>

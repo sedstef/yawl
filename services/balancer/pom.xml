@@ -11,13 +11,44 @@
 
     <name>YAWL - Balancer</name>
 
-    <properties>
-        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-    
     <build>
+        <sourceDirectory>../../src</sourceDirectory>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <excludes>
+                        <exclude>org/yawlfoundation/yawl/authentication/**</exclude>
+                        <!--exclude>org/yawlfoundation/yawl/balancer/**</exclude-->
+                        <exclude>org/yawlfoundation/yawl/controlpanel/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/cost/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/digitalSignature/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/documentStore/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/elements/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/engine/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/exceptions/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/logging/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/mailSender/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/mailService/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/monitor/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/procletService/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/reporter/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/resourcing/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/scheduling/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/schema/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/simulation/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/smsModule/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/swingWorklist/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/twitterService/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/unmarshal/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/util/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/worklet/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/wsif/**</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -25,6 +56,15 @@
                 <configuration>
                     <warName>balancer</warName>
                     <webXml>${project.basedir}/../../build/balancer/web.xml</webXml>
+                    <webResources>
+                        <resource>
+                            <directory>../../build/balancer</directory>
+                            <excludes>
+                                <exclude>web.xml</exclude>
+                            </excludes>
+                            <targetPath>WEB-INF/config</targetPath>
+                        </resource>
+                    </webResources>
                 </configuration>
             </plugin>
             <plugin>
@@ -59,7 +99,25 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>yawl-lib</artifactId>
-        </dependency>        
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20170516</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.hawkular.datamining</groupId>
+            <artifactId>hawkular-datamining-forecast</artifactId>
+            <version>0.2.0.Final</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-vfs2</artifactId>
+            <version>2.1</version>
+            <type>jar</type>
+        </dependency>
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
