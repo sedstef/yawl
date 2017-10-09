@@ -6,10 +6,10 @@
         <artifactId>parent</artifactId>
         <version>4.1-SNAPSHOT</version>
     </parent>
-    <artifactId>controlpanel</artifactId>
+    <artifactId>yadmin</artifactId>
     <packaging>jar</packaging>
 
-    <name>YAWL Controlpanel</name>
+    <name>YAWL Admin GUI</name>
 
     <build>
         <sourceDirectory>../src</sourceDirectory>
@@ -20,12 +20,14 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <includes>
+                        <include>org/yawlfoundation/yawl/engine/gui/**</include>
+                        <include>org/yawlfoundation/yawl/swingWorklist/**</include>
+                    </includes>
                     <excludes>
                         <exclude>org/yawlfoundation/yawl/authentication/**</exclude>
                         <exclude>org/yawlfoundation/yawl/balancer/**</exclude>
-                        <!--exclude>org/yawlfoundation/yawl/controlpanel/**</exclude-->
+                        <exclude>org/yawlfoundation/yawl/controlpanel/**</exclude>
                         <exclude>org/yawlfoundation/yawl/cost/**</exclude>
                         <exclude>org/yawlfoundation/yawl/digitalSignature/**</exclude>
                         <exclude>org/yawlfoundation/yawl/documentStore/**</exclude>
@@ -43,7 +45,7 @@
                         <exclude>org/yawlfoundation/yawl/schema/**</exclude>
                         <exclude>org/yawlfoundation/yawl/simulation/**</exclude>
                         <exclude>org/yawlfoundation/yawl/smsModule/**</exclude>
-                        <exclude>org/yawlfoundation/yawl/swingWorklist/**</exclude>
+                        <!--exclude>org/yawlfoundation/yawl/swingWorklist/**</exclude-->
                         <exclude>org/yawlfoundation/yawl/twitterService/**</exclude>
                         <exclude>org/yawlfoundation/yawl/unmarshal/**</exclude>
                         <exclude>org/yawlfoundation/yawl/util/**</exclude>
@@ -61,12 +63,6 @@
             <artifactId>yawl-lib</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.simplericity.macify</groupId>
-            <artifactId>macify</artifactId>
-            <version>1.6</version>
-            <type>jar</type>
         </dependency>
     </dependencies>
 

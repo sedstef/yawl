@@ -12,12 +12,8 @@
     <version>4.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>YAWL Library</name>
+    <name>YAWL - Engine Library</name>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-    
     <build>
         <sourceDirectory>../../src</sourceDirectory>
         <!-- TODO <testSourceDirectory>../../test</testSourceDirectory> -->

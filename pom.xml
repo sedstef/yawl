@@ -25,6 +25,7 @@
         <module>services</module>
         <module>controlpanel</module>
         <module>editor</module>
+        <module>yadmin</module>
     </modules>
     
     <profiles>        
