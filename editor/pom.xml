@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.yawlfoundation</groupId>
+        <artifactId>parent</artifactId>
+        <version>4.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>editor</artifactId>
+    <packaging>jar</packaging>
+
+    <name>YAWL Editor</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+    <build>
+        <sourceDirectory>../src</sourceDirectory>
+        
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <excludes>
+                        <exclude>org/yawlfoundation/yawl/authentication/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/balancer/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/controlpanel/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/cost/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/digitalSignature/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/documentStore/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/elements/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/engine/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/exceptions/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/logging/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/mailSender/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/mailService/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/monitor/**</exclude>
+                        <!--exclude>org/yawlfoundation/yawl/procletService/**</exclude-->
+                        <exclude>org/yawlfoundation/yawl/reporter/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/resourcing/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/scheduling/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/schema/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/simulation/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/smsModule/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/swingWorklist/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/twitterService/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/unmarshal/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/util/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/worklet/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/wsif/**</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>yawl-lib</artifactId>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.9.1</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.simplericity.macify</groupId>
+            <artifactId>macify</artifactId>
+            <version>1.6</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.jung</groupId>
+            <artifactId>jung-algorithms</artifactId>
+            <version>2.0</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.jung</groupId>
+            <artifactId>jung-graph-impl</artifactId>
+            <version>2.0</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.jung</groupId>
+            <artifactId>jung-visualization</artifactId>
+            <version>2.0</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.9.1</version>
+        </dependency>
+    </dependencies>
+
+</project>
