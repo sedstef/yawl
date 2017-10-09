@@ -30,11 +30,13 @@
         <module>reporter</module>
         <module>resourceService</module>
         <module>schedulingService</module>
-        <module>testService</module>
         <module>twitterService</module>
         <module>workletService</module>
         <module>yawlSMSInvoker</module>
+        <!--
+        org.apache.wsif is retired
         <module>yawlWSInvoker</module>
+        -->
     </modules>
 
     <dependencyManagement>
