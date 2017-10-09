@@ -12,6 +12,7 @@
     <name>YAWL - YawlWSInvoker</name>
 
     <build>
+        <sourceDirectory>../../src</sourceDirectory>
         <resources>
             <resource>
                 <directory>../../build/yawlWSInvoker</directory>
@@ -22,6 +23,41 @@
         </resources>
         
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <excludes>
+                        <exclude>org/yawlfoundation/yawl/authentication/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/balancer/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/controlpanel/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/cost/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/digitalSignature/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/documentStore/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/elements/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/engine/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/exceptions/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/logging/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/mailSender/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/mailService/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/monitor/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/procletService/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/reporter/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/resourcing/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/scheduling/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/schema/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/simulation/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/smsModule/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/swingWorklist/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/twitterService/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/unmarshal/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/util/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/worklet/**</exclude>
+                        <!--exclude>org/yawlfoundation/yawl/wsif/**</exclude-->
+                    </excludes>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -64,6 +100,13 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>yawl-lib</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/wsdl4j/wsdl4j -->
+        <dependency>
+            <groupId>wsdl4j</groupId>
+            <artifactId>wsdl4j</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
