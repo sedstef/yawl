@@ -66,18 +66,31 @@
                     <source>1.6</source>
                     <target>1.6</target>
                     <excludes>
+                        <!--exclude>org/yawlfoundation/yawl/authentication/**</exclude-->
                         <exclude>org/yawlfoundation/yawl/balancer/**</exclude>
                         <exclude>org/yawlfoundation/yawl/controlpanel/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/cost/**</exclude>
                         <exclude>org/yawlfoundation/yawl/digitalSignature/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/documentStore/**</exclude>
+                        <!--exclude>org/yawlfoundation/yawl/elements/**</exclude-->
+                        <!--exclude>org/yawlfoundation/yawl/engine/**</exclude-->
+                        <exclude>org/yawlfoundation/yawl/engine/gui/**</exclude>
+                        <!--exclude>org/yawlfoundation/yawl/exceptions/**</exclude-->
+                        <exclude>org/yawlfoundation/yawl/logging/**</exclude>
                         <exclude>org/yawlfoundation/yawl/mailSender/**</exclude>
                         <exclude>org/yawlfoundation/yawl/mailService/**</exclude>
                         <exclude>org/yawlfoundation/yawl/monitor/**</exclude>
                         <exclude>org/yawlfoundation/yawl/procletService/**</exclude>
                         <exclude>org/yawlfoundation/yawl/reporter/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/resourcing/**</exclude>
                         <exclude>org/yawlfoundation/yawl/scheduling/**</exclude>
+                        <!--exclude>org/yawlfoundation/yawl/schema/**</exclude-->
                         <exclude>org/yawlfoundation/yawl/simulation/**</exclude>
                         <exclude>org/yawlfoundation/yawl/smsModule/**</exclude>
+                        <exclude>org/yawlfoundation/yawl/swingWorklist/**</exclude>
                         <exclude>org/yawlfoundation/yawl/twitterService/**</exclude>
+                        <!--exclude>org/yawlfoundation/yawl/unmarshal/**</exclude-->
+                        <!--exclude>org/yawlfoundation/yawl/util/**</exclude-->
                         <exclude>org/yawlfoundation/yawl/worklet/**</exclude>
                         <exclude>org/yawlfoundation/yawl/wsif/**</exclude>
                     </excludes>
@@ -130,7 +143,12 @@
             <artifactId>hibernate-ehcache</artifactId>
             <version>4.3.11.Final</version>
         </dependency>
-
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache-core</artifactId>
+            <version>2.4.3</version>
+        </dependency>
+        
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
@@ -166,6 +184,7 @@
             <artifactId>appbase</artifactId>
             <version>1.0</version>
         </dependency>
+        
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
@@ -209,11 +228,7 @@
             <artifactId>derbyclient</artifactId>
             <version>10.13.1.1</version>
         </dependency>
-        <dependency>
-            <groupId>net.sf.ehcache</groupId>
-            <artifactId>ehcache-core</artifactId>
-            <version>2.4.3</version>
-        </dependency>
+        
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
