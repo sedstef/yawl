@@ -18,6 +18,16 @@
 
 package org.yawlfoundation.yawl.scheduling.util;
 
+import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import javax.servlet.http.HttpSession;
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.Duration;
 import org.jdom2.Attribute;
 import org.jdom2.Document;
 import org.jdom2.Element;
@@ -38,17 +48,6 @@ import org.yawlfoundation.yawl.resourcing.resource.nonhuman.NonHumanCategory;
 import org.yawlfoundation.yawl.resourcing.resource.nonhuman.NonHumanResource;
 import org.yawlfoundation.yawl.scheduling.Constants;
 import org.yawlfoundation.yawl.util.JDOMUtil;
-
-import javax.servlet.http.HttpSession;
-import javax.xml.datatype.DatatypeConfigurationException;
-import javax.xml.datatype.DatatypeFactory;
-import javax.xml.datatype.Duration;
-import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.*;
 
 public class Utils implements Constants {
 
@@ -589,7 +588,7 @@ public class Utils implements Constants {
 		}
 	}
 
-	public static String getLogRequestParameters(Map<String, Object> parameterMap)
+	public static String getLogRequestParameters(Map<String, String[]> parameterMap)
 	{
 		ArrayList<String> keys = new ArrayList<String>(parameterMap.keySet());
 		String log = "request parameters, size = " + keys.size();
