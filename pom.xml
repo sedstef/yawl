@@ -21,10 +21,8 @@
         <module>controlpanel</module>
         <module>editor</module>
         -->
-        <module>runtime</module>
-        <module>yawl-lib</module>
-        <module>engine</module>
-        <module>resourceService</module>
+        <module>yawl/yawl-lib</module>
+        <module>services</module>
     </modules>
     
     <profiles>        

@@ -3,16 +3,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.yawlfoundation</groupId>
-        <artifactId>parent</artifactId>
+        <artifactId>services</artifactId>
         <version>4.1-SNAPSHOT</version>
     </parent>
-
-    <groupId>org.yawlfoundation</groupId>
-    <artifactId>engine</artifactId>
-    <version>4.1-SNAPSHOT</version>
+    <artifactId>costService</artifactId>
     <packaging>war</packaging>
 
-    <name>YAWL Engine</name>
+    <name>YAWL - CostService</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
@@ -40,8 +37,8 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.3</version>
                 <configuration>
-                    <warName>yawl</warName>
-                    <webXml>${project.basedir}/../../build/engine/web.xml</webXml>
+                    <warName>balancer</warName>
+                    <webXml>${project.basedir}/../../build/costService/web.xml</webXml>
                 </configuration>
             </plugin>
             <plugin>
