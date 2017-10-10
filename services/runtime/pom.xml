@@ -32,7 +32,13 @@
                     <addWarDependenciesInClassloader>true</addWarDependenciesInClassloader>
                     
                     <!--warSourceDirectory>${project.build.directory}/${project.build.finalName}/</warSourceDirectory-->
-                    
+                    <systemProperties>
+                        <!-- TODO use profiles -->
+                        <hibernate.dialect>org.hibernate.dialect.H2Dialect</hibernate.dialect>
+                        <hibernate.connection.driver_class>org.h2.Driver</hibernate.connection.driver_class>
+                        <hibernate.connection.url>jdbc:h2:~/yawl;MVCC=TRUE;AUTO_SERVER=TRUE</hibernate.connection.url>
+                        <hibernate.current_session_context_class>thread</hibernate.current_session_context_class>
+                    </systemProperties>
                     <webapps> 
                         <webapp>
                             <contextPath>/yawl</contextPath> 
