@@ -18,12 +18,12 @@
 
 package org.yawlfoundation.yawl.engine.interfce;
 
+import java.util.Hashtable;
+import java.util.Map;
+import javax.xml.bind.annotation.XmlTransient;
 import org.jdom2.Element;
 import org.yawlfoundation.yawl.util.JDOMUtil;
 import org.yawlfoundation.yawl.util.StringUtil;
-
-import java.util.Hashtable;
-import java.util.Map;
 
 /**
  * A 'stringified' record of a workitem for passing across various HTTP interfaces
@@ -333,8 +333,10 @@ public class WorkItemRecord implements Cloneable {
 
 
     /** @deprecated - use getDataList() */
+    @XmlTransient
     public Element getWorkItemData() { return getDataList(); }
 
+    @XmlTransient
     public Element getDataList() {
         if (_dataList == null) _dataList = JDOMUtil.stringToElement(_dataListString);
         return _dataList;
@@ -344,6 +346,7 @@ public class WorkItemRecord implements Cloneable {
 
     public String getTag() { return _tag ; }
 
+    @XmlTransient
     public Element getUpdatedData() {
         if (_dataListUpdated == null) {
             _dataListUpdated = JDOMUtil.stringToElement(_dataListUpdatedString);
