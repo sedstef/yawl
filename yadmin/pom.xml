@@ -13,6 +13,18 @@
 
     <build>
         <sourceDirectory>../src</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>../src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                    <exclude>**/*.jsp</exclude>
+                </excludes>        
+            </resource>
+        </resources>
         
         <plugins>
             <plugin>
@@ -62,8 +74,21 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>yawl-lib</artifactId>
             <version>${project.version}</version>
-            <scope>provided</scope>
         </dependency>
+        
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <version>10.13.1.1</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.196</version>
+            <scope>runtime</scope>
+        </dependency>
+                    
     </dependencies>
 
 </project>
