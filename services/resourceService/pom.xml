@@ -35,6 +35,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.3</version>
                 <configuration>
+                    <warName>resourceService</warName>
                     <webXml>${project.basedir}/../../build/resourceService/web.xml</webXml>
                     <containerConfigXML>src/main/webapp/META-INF/context.xml</containerConfigXML>
                     <warSourceDirectory>${project.basedir}/../../src/org/yawlfoundation/yawl/resourcing/jsf/jsp</warSourceDirectory>
